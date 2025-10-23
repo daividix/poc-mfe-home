@@ -1,0 +1,35 @@
+<div class="main">
+  <div class="title">
+    @if(user?.gender == 'male') {
+      <img src="https://avatar.iran.liara.run/public/boy" width="48px">
+    }
+    @if(user?.gender == 'female') {
+      <img src="https://avatar.iran.liara.run/public/girl" width="48px">
+    }
+    <h1 style="margin-top: 5px">{{user?.firstName}} {{user?.lastName}}</h1>
+  </div>
+  <div>
+    <h3 class="title">Personajes Simpsons</h3>
+    <div class="card-container">
+      @for(character of simpsonsCharacters; track character.id) {
+        <div class="card">
+          <img 
+          src="https://cdn.thesimpsonsapi.com/500{{character.portrait_path}}">
+          <h2>{{character.name}}</h2>
+          <p>{{character.occupation}}</p>
+
+        </div>
+      }
+    </div>
+    @if(page < pages && simpsonsCharacters.length) {
+      <div class="title">
+        @if(finding()) {
+          Cargando...
+        } @else {
+          <button class="btn-more" (click)="findSimpsonsCharacters()">+</button>
+        }
+      </div>
+    }
+    
+  </div>
+</div>

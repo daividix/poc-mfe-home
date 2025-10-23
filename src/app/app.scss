@@ -1,0 +1,31 @@
+.main {
+	.title {
+		text-align: center;
+	}
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-block: 15px;
+  .card {
+  	border: 1px solid gray;
+  	border-radius: 5px;
+  	padding: 25px;
+    text-align: center;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.btn-more {
+  all: unset;
+  padding-inline: 15px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
