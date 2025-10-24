@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
     "build:dev": "ng build --configuration development",
     "start:static": "ng build --configuration development && npx serve dist/poc-mfe-home --listen 4203 --cors"
@@ -33,23 +34,22 @@
     "@angular/router": "^20.3.0",
     "@poc-mfe/shared": "^0.0.3",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "zone.js": "^0.15.1"
   },
   "devDependencies": {
+    "@analogjs/vite-plugin-angular": "^1.22.1",
+    "@analogjs/vitest-angular": "^1.22.1",
     "@angular-architects/module-federation": "^20.0.0",
-    "@angular-devkit/build-angular": "^20.3.6",
     "@angular/build": "^20.3.6",
     "@angular/cli": "^20.3.6",
     "@angular/compiler-cli": "^20.3.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.9.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
+    "@angular/platform-browser-dynamic": "^20.3.7",
+    "@testing-library/angular": "^18.1.0",
+    "jsdom": "^27.0.1",
     "ngx-build-plus": "^20.0.0",
     "serve": "^14.2.5",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "vitest": "^3.2.4"
   }
 }
