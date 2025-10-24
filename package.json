@@ -34,8 +34,7 @@
     "@angular/router": "^20.3.0",
     "@poc-mfe/shared": "^0.0.3",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "^0.15.1"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^1.22.1",
@@ -50,6 +49,7 @@
     "ngx-build-plus": "^20.0.0",
     "serve": "^14.2.5",
     "typescript": "~5.9.2",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "zone.js": "^0.15.1"
   }
 }
